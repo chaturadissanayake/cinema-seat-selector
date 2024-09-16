@@ -22,6 +22,27 @@ body, html {
   z-index: -1; /* Ensures it stays behind the content */
 }
 
+.movie-selection-container {
+  text-align: center;
+  margin-top: 20px;
+  padding: 10px 0;
+}
+
+.movie-selection-container label {
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.movie-dropdown {
+  width: 220px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
 .container {
   max-width: 800px;
   margin: 50px auto;
@@ -37,20 +58,7 @@ body, html {
 h1 {
   color: #f39c12;
   margin-bottom: 20px;
-}
-
-.movie-selection {
-  margin-bottom: 20px;
-}
-
-.movie-dropdown {
-  width: 220px;
-  padding: 10px;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  text-align: center;
 }
 
 .screen {
@@ -125,10 +133,7 @@ h1 {
 }
 
 .static-selected {
-  background-color: #f39c12Here’s the complete **CSS** code to finish the styling:
-
-```css
-/* Continue from the previous CSS */
+  background-color: #f39c12;
 }
 
 .static-unavailable {
@@ -138,6 +143,7 @@ h1 {
 .summary {
   margin-top: 20px;
   font-size: 18px;
+  text-align: center;
 }
 
 .btn {
@@ -148,6 +154,8 @@ h1 {
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
+  margin: 0 auto;
+  display: block;
 }
 
 .btn:hover {
