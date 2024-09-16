@@ -4,8 +4,6 @@ const seats = document.querySelectorAll('.row .seat:not(.unavailable)');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
 
-let ticketPrice = 0;
-
 // Update total price and count
 function updateSelectedCount() {
   const selectedSeats = document.querySelectorAll('.row .seat.selected');
