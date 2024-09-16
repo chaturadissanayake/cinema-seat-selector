@@ -7,7 +7,7 @@ body, html {
   max-width: 800px;
   margin: 50px auto;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.7); /* Adjust opacity for better readability */
+  background-color: #2d2f3b;
   padding: 20px;
   border-radius: 10px;
   color: #fff;
@@ -16,24 +16,27 @@ body, html {
 
 h1 {
   color: #f39c12;
+  margin-bottom: 20px;
 }
 
 .movie-selection {
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .movie-selection label {
-  color: #fff;
+  font-size: 18px;
 }
 
 .movie-dropdown {
-  width: 200px;
+  width: 220px;
   padding: 10px;
   background-color: #333;
   color: #fff;
   border: none;
   border-radius: 5px;
   font-size: 16px;
+  text-align: center;
 }
 
 .screen {
@@ -42,7 +45,7 @@ h1 {
   width: 100%;
   text-align: center;
   line-height: 50px;
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   color: #000;
   margin: 20px 0;
