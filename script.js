@@ -3,7 +3,6 @@ const container = document.querySelector('.seat-grid');
 const seats = document.querySelectorAll('.row .seat:not(.unavailable)');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
-const movieSelect = document.getElementById('movie');
 
 let ticketPrice = 0;
 
@@ -27,10 +26,4 @@ container.addEventListener('click', (e) => {
     e.target.classList.toggle('selected');
     updateSelectedCount();
   }
-});
-
-// Update movie ticket price if needed (if you have dynamic movie pricing)
-movieSelect.addEventListener('change', (e) => {
-  ticketPrice = parseInt(e.target.value);
-  updateSelectedCount();
 });
