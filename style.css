@@ -17,11 +17,12 @@ body, html {
 h1 {
   color: #f39c12;
   margin-bottom: 20px;
+  text-align: center; /* Center-align title */
 }
 
 .movie-selection {
   margin-bottom: 20px;
-  text-align: center;
+  text-align: center; /* Center-align the dropdown */
 }
 
 .movie-selection label {
@@ -130,6 +131,8 @@ h1 {
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
+  margin: 0 auto; /* Center the button */
+  display: block;
 }
 
 .btn:hover {
