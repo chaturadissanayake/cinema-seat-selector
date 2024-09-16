@@ -1,32 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body, html {
   height: 100%;
   font-family: 'Roboto', sans-serif;
 }
 
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('Assets/krists-luhaers-AtPWnYNDJnM-unsplash.jpg'); /* Update this path */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px); /* Blurred effect */
+  z-index: -1; /* Ensures it stays behind the content */
+}
+
 .container {
   max-width: 800px;
   margin: 50px auto;
-  text-align: center;
-  background-color: #2d2f3b;
   padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Slight opacity for readability */
+  color: white;
   border-radius: 10px;
-  color: #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  position: relative;
+  text-align: center;
 }
 
 h1 {
   color: #f39c12;
   margin-bottom: 20px;
-  text-align: center; /* Center-align title */
 }
 
 .movie-selection {
   margin-bottom: 20px;
-  text-align: center; /* Center-align the dropdown */
-}
-
-.movie-selection label {
-  font-size: 18px;
 }
 
 .movie-dropdown {
@@ -37,7 +51,6 @@ h1 {
   border: none;
   border-radius: 5px;
   font-size: 16px;
-  text-align: center;
 }
 
 .screen {
@@ -51,6 +64,7 @@ h1 {
   color: #000;
   margin: 20px 0;
   border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
 }
 
 .seat-grid {
@@ -111,7 +125,10 @@ h1 {
 }
 
 .static-selected {
-  background-color: #f39c12;
+  background-color: #f39c12Here’s the complete **CSS** code to finish the styling:
+
+```css
+/* Continue from the previous CSS */
 }
 
 .static-unavailable {
@@ -131,8 +148,6 @@ h1 {
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
-  margin: 0 auto; /* Center the button */
-  display: block;
 }
 
 .btn:hover {
