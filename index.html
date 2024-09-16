@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cinema Seat Selection</title>
+  <title>Cinema Seat Selector</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Background Image -->
+  <div class="background"></div>
+
+  <!-- Main Content Container -->
   <div class="container">
     <h1>2024 Movie Showcase</h1>
 
@@ -15,11 +19,11 @@
     <div class="movie-selection">
       <label for="movie">Choose a movie:</label>
       <select id="movie" class="movie-dropdown">
-        <option value="800">Barbie</option>
-        <option value="1200">Oppenheimer</option>
-        <option value="1000">Elemental</option>
-        <option value="1200">Spider-Man: No Way Home</option>
-        <option value="1000">The Batman</option>
+        <option value="barbie">Barbie</option>
+        <option value="oppenheimer">Oppenheimer</option>
+        <option value="elemental">Elemental</option>
+        <option value="spiderman">Spider-Man: No Way Home</option>
+        <option value="batman">The Batman</option>
       </select>
     </div>
 
@@ -28,7 +32,7 @@
       <span>SCREEN</span>
     </div>
     
-    <!-- Seat Layout -->
+    <!-- Curved Seat Layout -->
     <div class="seat-grid">
       <!-- Front row (10 seats) -->
       <div class="row">
@@ -60,6 +64,7 @@
         <div class="seat" data-price="1200">B12</div>
       </div>
 
+      <!-- Another row of 12 seats -->
       <div class="row">
         <div class="seat" data-price="1200">C1</div>
         <div class="seat" data-price="1200">C2</div>
