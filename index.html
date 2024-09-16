@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cinema Seat Selection</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>2024 Movie Showcase</h1>
+
+    <!-- Movie Selection Dropdown -->
+    <div class="movie-selection">
+      <label for="movie">Choose a movie:</label>
+      <select id="movie" class="movie-dropdown">
+        <option value="barbie">Barbie</option>
+        <option value="oppenheimer">Oppenheimer</option>
+        <option value="elemental">Elemental</option>
+        <option value="spiderman">Spider-Man: No Way Home</option>
+        <option value="batman">The Batman</option>
+      </select>
+    </div>
+
+    <!-- Screen Section -->
+    <div class="screen">
+      <span>SCREEN</span>
+    </div>
+    
+    <!-- Curved Seat Layout with Dynamic Pricing -->
+    <div class="seat-grid">
+      <!-- Front row (10 seats) -->
+      <div class="row">
+        <div class="seat" data-price="800">A1</div>
+        <div class="seat" data-price="800">A2</div>
+        <div class="seat" data-price="800">A3</div>
+        <div class="seat" data-price="800">A4</div>
+        <div class="seat" data-price="800">A5</div>
+        <div class="seat" data-price="800">A6</div>
+        <div class="seat" data-price="800">A7</div>
+        <div class="seat" data-price="800">A8</div>
+        <div class="seat" data-price="800">A9</div>
+        <div class="seat" data-price="800">A10</div>
+      </div>
+
+      <!-- Middle section (12 seats per row) -->
+      <div class="row">
+        <div class="seat" data-price="1200">B1</div>
+        <div class="seat" data-price="1200">B2</div>
+        <div class="seat" data-price="1200">B3</div>
+        <div class="seat" data-price="1200">B4</div>
+        <div class="seat" data-price="1200">B5</div>
+        <div class="seat" data-price="1200">B6</div>
+        <div class="seat" data-price="1200">B7</div>
+        <div class="seat" data-price="1200">B8</div>
+        <div class="seat" data-price="1200">B9</div>
+        <div class="seat" data-price="1200">B10</div>
+        <div class="seat" data-price="1200">B11</div>
+        <div class="seat" data-price="1200">B12</div>
+      </div>
+
+      <div class="row">
+        <div class="seat" data-price="1200">C1</div>
+        <div class="seat" data-price="1200">C2</div>
+        <div class="seat" data-price="1200">C3</div>
+        <div class="seat" data-price="1200">C4</div>
+        <div class="seat" data-price="1200">C5</div>
+        <div class="seat" data-price="1200">C6</div>
+        <div class="seat" data-price="1200">C7</div>
+        <div class="seat" data-price="1200">C8</div>
+        <div class="seat" data-price="1200">C9</div>
+        <div class="seat" data-price="1200">C10</div>
+        <div class="seat" data-price="1200">C11</div>
+        <div class="seat" data-price="1200">C12</div>
+      </div>
+
+      <!-- Back rows (10 seats per row) -->
+      <div class="row">
+        <div class="seat" data-price="1500">D1</div>
+        <div class="seat" data-price="1500">D2</div>
+        <div class="seat" data-price="1500">D3</div>
+        <div class="seat" data-price="1500">D4</div>
+        <div class="seat" data-price="1500">D5</div>
+        <div class="seat" data-price="1500">D6</div>
+        <div class="seat" data-price="1500">D7</div>
+        <div class="seat" data-price="1500">D8</div>
+        <div class="seat" data-price="1500">D9</div>
+        <div class="seat" data-price="1500">D10</div>
+      </div>
+    </div>
+
+    <!-- Seat Legend -->
+    <div class="legend">
+      <div class="legend-item"><div class="seat static-available"></div><span>Available Seat</span></div>
+      <div class="legend-item"><div class="seat static-selected"></div><span>Selected Seat</span></div>
+      <div class="legend-item"><div class="seat static-unavailable"></div><span>Unavailable Seat</span></div>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="summary">
+      <p><span id="count">0</span> seat(s) selected.</p>
+      <p>Total: LKR <span id="total">0</span></p>
+      <button class="btn">Proceed</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
