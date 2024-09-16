@@ -1,14 +1,15 @@
-## Movie Seat Booking
+# Cinema Seat Selector
 
-Display movie choices and seats in a theater to select from in order to purchase tickets
+A responsive cinema seat selection system built with HTML, CSS, and JavaScript. This system allows users to select seats dynamically from a grid layout, with seat prices varying depending on their position in the cinema.
 
-## Project Specifications
+## Features
 
-- Display UI with movie select, screen, seats, legend & seat info
-- User can select a movie/price
-- User can select/deselect seats
-- User can not select occupied seats
-- Number of seats and price will update
-- Save seats, movie and price to local storage so that UI is still populated on refresh
+- Dynamic seat selection with real-time price calculation.
+- Different pricing for front, middle, and back rows.
+- Aesthetic blurred background image for the cinema interface.
 
-Design inspiration from [Dribbble](https://dribbble.com/shots/3628370-Movie-Seat-Booking)
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/chaturawtf/cinema-seat-selector.git
