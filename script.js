@@ -1,24 +1,40 @@
-// Seat selection functionality
-
-// Select the necessary DOM elements
+// Selectors
 const container = document.querySelector('.seat-grid');
 const seats = document.querySelectorAll('.row .seat:not(.unavailable)');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
 
-// Function to update selected seat count and total price
+// Update total price and count
 function updateSelectedCount() {
   const selectedSeats = document.querySelectorAll('.row .seat.selected');
+
+  // Get selected seat indices and save them in localStorage for persistence
+  const selectedSeatIndices = [...selectedSeats].map(seat => [...seats].indexOf(seat));
+  localStorage.setItem('selectedSeats', JSON.stringify(selectedSeatIndices));
+
   const selectedSeatsCount = selectedSeats.length;
 
-  // Get total price of selected seats based on their data-price attribute
+  // Calculate total price based on data-price attributes of the selected seats
   const totalPrice = Array.from(selectedSeats).reduce((total, seat) => {
-    return total + parseInt(seat.getAttribute('data-price'));
+    return total + parseInt(seat.getAttribute('data-price'), 10);
   }, 0);
 
-  // Update the count and total in the UI
+  // Update seat count and total price in the DOM
   count.innerText = selectedSeatsCount;
   total.innerText = totalPrice;
+}
+
+// Load saved seat selection from localStorage
+function populateUI() {
+  const selectedSeats = JSON.parse(localStorage.getItem('selectedSeats'));
+
+  if (selectedSeats !== null && selectedSeats.length > 0) {
+    seats.forEach((seat, index) => {
+      if (selectedSeats.indexOf(index) > -1) {
+        seat.classList.add('selected');
+      }
+    });
+  }
 }
 
 // Seat click event listener
@@ -29,16 +45,8 @@ container.addEventListener('click', (e) => {
   }
 });
 
-// Slideshow functionality
+// Initial population of seat selection (on page load)
+populateUI();
 
-let currentIndex = 0;
-const images = document.querySelectorAll('.slideshow img');
-
-function showNextImage() {
-  images[currentIndex].style.opacity = 0; // Hide the current image
-  currentIndex = (currentIndex + 1) % images.length; // Move to the next image
-  images[currentIndex].style.opacity = 1; // Show the next image
-}
-
-// Set the slideshow interval
-setInterval(showNextImage, 3000); // Change image every 3 seconds
+// Update count and total on initial load
+updateSelectedCount();
