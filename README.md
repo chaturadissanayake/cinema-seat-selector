@@ -2,7 +2,7 @@
 
 An interactive cinema seat selection tool allows users to pick and book their seats based on availability, price, and preferences. Ideal for any movie theatre website!
 
-![Cineplex Movies Seat Selector](path/to/screenshot.png)
+![Cineplex Movies Seat Selector](Assets/Screenshot 2024-09-28 001427.png)
 
 ## 🚀 Features
 
