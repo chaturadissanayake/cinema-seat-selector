@@ -19,6 +19,7 @@ body {
   align-items: center;
   background-color: #000;
   overflow: hidden;
+  margin: 0;
 }
 
 /* Main container */
@@ -49,6 +50,7 @@ body {
   z-index: -1;
 }
 
+/* Ensure the images cover the full screen */
 @keyframes slideBackground {
   0% { background-image: url('Assets/Background_Scene1.png'); }
   33% { background-image: url('Assets/Background_Scene2.png'); }
