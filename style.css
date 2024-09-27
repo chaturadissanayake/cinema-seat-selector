@@ -1,8 +1,10 @@
 /* Global reset and box-sizing */
-* {
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html, body {
@@ -10,72 +12,55 @@ html, body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* Center content in the body */
 body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #000;
+  overflow: hidden;
 }
 
-/* Main content container */
+/* Main container */
 .container {
   max-width: 800px;
   margin: 50px auto;
   text-align: center;
-  background-color: rgba(45, 47, 59, 0.8); /* Semi-transparent for readability */
+  background-color: rgba(45, 47, 59, 0.9); /* Semi-transparent for readability */
   padding: 20px;
   border-radius: 10px;
   color: #fff;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  position: relative;
   z-index: 1;
+  position: relative;
 }
 
-/* Slideshow Background */
-.slideshow {
+/* Background images slideshow */
+.background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideBackground 6s infinite;
   z-index: -1;
 }
 
-.slideshow img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  animation: slideShow 9s infinite;
+@keyframes slideBackground {
+  0% { background-image: url('Assets/Background_Scene1.png'); }
+  33% { background-image: url('Assets/Background_Scene2.png'); }
+  66% { background-image: url('Assets/Background_Scene3.png'); }
+  100% { background-image: url('Assets/Background_Scene1.png'); }
 }
 
-.slideshow img:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.slideshow img:nth-child(2) {
-  animation-delay: 3s;
-}
-
-.slideshow img:nth-child(3) {
-  animation-delay: 6s;
-}
-
-/* Animation for background slideshow */
-@keyframes slideShow {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  40% { opacity: 1; }
-  60% { opacity: 0; }
-  100% { opacity: 0; }
-}
-
-/* Heading style */
+/* Header styling */
 h1 {
   color: #f39c12;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 /* Screen section */
@@ -86,13 +71,14 @@ h1 {
   text-align: center;
   line-height: 50px;
   font-size: 24px;
+  font-weight: 400; /* Set to regular font-weight */
   color: #000;
-  margin-bottom: 20px;
+  margin: 20px 0;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Seat grid */
+/* Seat grid layout */
 .seat-grid {
   display: flex;
   flex-direction: column;
@@ -129,7 +115,7 @@ h1 {
   background-color: #666;
 }
 
-/* Legend */
+/* Legend styling */
 .legend {
   display: flex;
   justify-content: space-around;
@@ -174,6 +160,8 @@ h1 {
   font-size: 18px;
   border-radius: 5px;
   cursor: pointer;
+  margin: 0 auto;
+  display: block;
 }
 
 .btn:hover {
@@ -182,20 +170,22 @@ h1 {
 
 /* Footer styling */
 .footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
   position: fixed;
   bottom: 0;
+  left: 0;
   width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
   background-color: rgba(0, 0, 0, 0.7);
-  color: rgb(255, 255, 255);
+  color: #fff;
+  font-size: 14px;
 }
 
-.footer-left {
+.footer .cineplex {
   text-align: left;
 }
 
-.footer-right {
+.footer .designed-by {
   text-align: right;
 }
