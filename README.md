@@ -1,15 +1,18 @@
 # Cinema Seat Selector
 
-A responsive cinema seat selection system built with HTML, CSS, and JavaScript. This system allows users to select seats dynamically from a grid layout, with seat prices varying depending on their position in the cinema.
+A fully responsive cinema seat selection system built with HTML, CSS, and JavaScript. This project allows users to dynamically select seats from a grid, with prices varying depending on the seating section in the cinema.
 
 ## Features
 
-- Dynamic seat selection with real-time price calculation.
-- Different pricing for front, middle, and back rows.
-- Aesthetic blurred background image for the cinema interface.
+- **Dynamic Seat Selection**: Choose seats in real-time, with prices updating automatically based on selection.
+- **Tiered Pricing**: Different pricing for front, middle, and back rows.
+- **Modern UI**: Sleek cinema interface with a blurred background image for an enhanced user experience.
 
 ## Installation
 
+To set up the project locally, follow these steps:
+
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/chaturawtf/cinema-seat-selector.git
