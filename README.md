@@ -1,18 +1,27 @@
-# Cinema Seat Selector
+# 🎬 Cineplex Movies Seat Selector - v1.0.0
 
-A fully responsive cinema seat selection system built with HTML, CSS, and JavaScript. This project allows users to dynamically select seats from a grid, with prices varying depending on the seating section in the cinema.
+An interactive cinema seat selection tool allows users to pick and book their seats based on availability, price, and preferences. Ideal for any movie theatre website!
 
-## Features
+![Cineplex Movies Seat Selector](path/to/screenshot.png)
 
-- **Dynamic Seat Selection**: Choose seats in real-time, with prices updating automatically based on selection.
-- **Tiered Pricing**: Different pricing for front, middle, and back rows.
-- **Modern UI**: Sleek cinema interface with a blurred background image for an enhanced user experience.
+## 🚀 Features
 
-## Installation
+- **Cinema Seat Layout**: Users can select seats from the front, middle, and back sections.
+- **Seat Status Indicators**:
+  - Green: Available Seats
+  - Orange: Selected Seats
+  - Red: Unavailable Seats
+- **Real-time Total Calculation**: Updates the total price based on selected seats.
+- **Responsive Design**: Fully mobile-optimized layout.
+- **Easy to Customize**: Adjust layout, pricing, and styles to suit any cinema's needs.
 
-To set up the project locally, follow these steps:
+## 🖥️ Demo
 
-1. Clone the repository:
+Check out a live demo [here](https://your-live-demo-link.com).
 
-   ```bash
-   git clone https://github.com/chaturadissanayake/cinema-seat-selector.git
+## 🛠️ Installation
+
+### 1. Clone the repository:
+
+```bash
+git clone https://github.com/chaturadissanayake/cineplex-seat-selector.git
