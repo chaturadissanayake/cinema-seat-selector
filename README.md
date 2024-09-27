@@ -15,4 +15,4 @@ To set up the project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/chaturawtf/cinema-seat-selector.git
+   git clone https://github.com/chaturadissanayake/cinema-seat-selector.git
