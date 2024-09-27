@@ -8,60 +8,55 @@
   <style>
     /* Global reset and box-sizing */
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html, body {
       height: 100%;
       font-family: 'Roboto', sans-serif;
-      overflow: hidden;
-      background-color: #000;
     }
 
     body {
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-    }
-
-    /* Main container */
-    .container {
-      max-width: 800px;
-      margin: 50px auto;
-      text-align: center;
-      background-color: rgba(45, 47, 59, 0.85); /* Semi-transparent for readability */
-      padding: 20px;
-      border-radius: 10px;
-      color: #fff;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      z-index: 1;
+      background-color: #000;
       position: relative;
     }
 
-    /* Background image */
+    /* Background Image */
     .background {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('Assets/Background_Scene1.png'); /* Replace this path with your actual image */
+      background-image: url('Assets/krists-luhaers-AtPWnYNDJnM-unsplash.jpg');
       background-size: cover;
       background-position: center;
+      filter: blur(8px); /* Blurred effect */
       z-index: -1; /* Ensures it stays behind the content */
     }
 
-    /* Header styling */
+    /* Container styling */
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: rgba(45, 47, 59, 0.8); /* Transparency for background visibility */
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
     h1 {
       color: #f39c12;
       margin-bottom: 20px;
-      text-align: center;
     }
 
-    /* Screen section */
     .screen {
       background-color: #fff;
       height: 50px;
@@ -69,14 +64,12 @@
       text-align: center;
       line-height: 50px;
       font-size: 24px;
-      font-weight: 400; /* Regular weight */
       color: #000;
       margin: 20px 0;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
 
-    /* Seat grid layout */
     .seat-grid {
       display: flex;
       flex-direction: column;
@@ -113,7 +106,7 @@
       background-color: #666;
     }
 
-    /* Legend styling */
+    /* Legend */
     .legend {
       display: flex;
       justify-content: space-around;
@@ -143,11 +136,9 @@
       background-color: #e74c3c;
     }
 
-    /* Summary section */
     .summary {
       margin-top: 20px;
       font-size: 18px;
-      text-align: center;
     }
 
     .btn {
@@ -168,20 +159,18 @@
 
     /* Footer styling */
     .footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
       display: flex;
       justify-content: space-between;
+      width: 100%;
       padding: 10px 20px;
-      background-color: rgba(0, 0, 0, 0.7);
+      background-color: rgba(0, 0, 0, 0.8); /* Transparency for footer */
       color: #fff;
-      font-size: 14px;
+      position: fixed;
+      bottom: 0;
     }
 
-    .footer .cineplex {
-      text-align: left;
+    .footer .legal, .footer .designed-by {
+      font-size: 12px;
     }
 
     .footer .designed-by {
@@ -251,7 +240,7 @@
         <div class="seat" data-price="1200">C12</div>
       </div>
 
-      <!-- Back rows (12 seats) -->
+      <!-- Back rows (10 seats) -->
       <div class="row">
         <div class="seat" data-price="1500">D1</div>
         <div class="seat" data-price="1500">D2</div>
@@ -284,7 +273,7 @@
 
   <!-- Footer Section -->
   <div class="footer">
-    <div class="cineplex">
+    <div class="legal">
       <p>&copy; 2024 Cineplex Movies. All rights reserved.</p>
     </div>
     <div class="designed-by">
