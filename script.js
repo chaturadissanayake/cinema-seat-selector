@@ -1,45 +1,30 @@
-// Select DOM elements
+// Selectors
 const container = document.querySelector('.seat-grid');
 const seats = document.querySelectorAll('.row .seat:not(.unavailable)');
 const count = document.getElementById('count');
 const total = document.getElementById('total');
 
-// Prices for seats (you can modify as needed)
-const ticketPrice = {
-  'A': 800,
-  'B': 1200,
-  'C': 1200,
-  'D': 1500
-};
-
-// Update total count and total price
+// Update total price and count
 function updateSelectedCount() {
   const selectedSeats = document.querySelectorAll('.row .seat.selected');
-
-  // Get the selected seat count
   const selectedSeatsCount = selectedSeats.length;
 
-  // Get the total price based on the selected seats' data-price attributes
+  // Get total price of selected seats based on their data-price attribute
   const totalPrice = Array.from(selectedSeats).reduce((total, seat) => {
     return total + parseInt(seat.getAttribute('data-price'));
   }, 0);
 
-  // Update the displayed count and total
   count.innerText = selectedSeatsCount;
   total.innerText = totalPrice;
 }
 
-// Seat click event listener
+// Seat click event
 container.addEventListener('click', (e) => {
-  // Check if clicked seat is not unavailable
   if (e.target.classList.contains('seat') && !e.target.classList.contains('unavailable')) {
-    // Toggle selected class
     e.target.classList.toggle('selected');
-
-    // Update the count and total
     updateSelectedCount();
   }
 });
 
-// Initial count and total set to 0 when the page loads
+// Initial count and total set
 updateSelectedCount();
