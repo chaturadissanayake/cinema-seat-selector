@@ -1,8 +1,8 @@
 # 🎬 Cineplex Movies Seat Selector - v1.0.0
 
-An interactive cinema seat selection tool allows users to pick and book their seats based on availability, price, and preferences. Ideal for any movie theatre website!
+An interactive cinema seat selection tool, allowing users to pick and book their seats based on availability, price, and preferences. Ideal for any movie theater website!
 
-![Cineplex Movies Seat Selector](Assets/Screenshot 2024-09-28 001427.png)
+![Cineplex Movies Seat Selector](https://github.com/chaturadissanayake/cinema-seat-selector/blob/dde0a023489e0317f21353aaa3a7c14374801633/Assets/Screenshot%202024-09-28%20001427.png)
 
 ## 🚀 Features
 
@@ -15,13 +15,9 @@ An interactive cinema seat selection tool allows users to pick and book their se
 - **Responsive Design**: Fully mobile-optimized layout.
 - **Easy to Customize**: Adjust layout, pricing, and styles to suit any cinema's needs.
 
-## 🖥️ Demo
-
-Check out a live demo [here](https://your-live-demo-link.com).
-
 ## 🛠️ Installation
 
 ### 1. Clone the repository:
 
 ```bash
-git clone https://github.com/chaturadissanayake/cineplex-seat-selector.git
+git clone https://github.com/chaturadissanayake/cinema-seat-selector.git
