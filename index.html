@@ -8,77 +8,60 @@
   <style>
     /* Global reset and box-sizing */
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    body, html {
+    html, body {
       height: 100%;
       font-family: 'Roboto', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      overflow: hidden;
       background-color: #000;
     }
 
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Main container */
     .container {
       max-width: 800px;
       margin: 50px auto;
       text-align: center;
-      background-color: rgba(45, 47, 59, 0.8);
+      background-color: rgba(45, 47, 59, 0.85); /* Semi-transparent for readability */
       padding: 20px;
       border-radius: 10px;
       color: #fff;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-      position: relative;
       z-index: 1;
+      position: relative;
     }
 
-    /* Slideshow Background */
-    .slideshow {
+    /* Background image */
+    .background {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      background-image: url('Assets/Background_Scene1.png'); /* Replace this path with your actual image */
+      background-size: cover;
+      background-position: center;
+      z-index: -1; /* Ensures it stays behind the content */
     }
 
-    .slideshow img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      animation: slideShow 9s infinite;
-    }
-
-    .slideshow img:nth-child(1) {
-      animation-delay: 0s;
-    }
-
-    .slideshow img:nth-child(2) {
-      animation-delay: 3s;
-    }
-
-    .slideshow img:nth-child(3) {
-      animation-delay: 6s;
-    }
-
-    @keyframes slideShow {
-      0% { opacity: 0; }
-      20% { opacity: 1; }
-      40% { opacity: 1; }
-      60% { opacity: 0; }
-      100% { opacity: 0; }
-    }
-
+    /* Header styling */
     h1 {
       color: #f39c12;
       margin-bottom: 20px;
+      text-align: center;
     }
 
+    /* Screen section */
     .screen {
       background-color: #fff;
       height: 50px;
@@ -86,12 +69,14 @@
       text-align: center;
       line-height: 50px;
       font-size: 24px;
+      font-weight: 400; /* Regular weight */
       color: #000;
-      margin-bottom: 20px;
+      margin: 20px 0;
       border-radius: 5px;
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     }
 
+    /* Seat grid layout */
     .seat-grid {
       display: flex;
       flex-direction: column;
@@ -124,6 +109,11 @@
       cursor: not-allowed;
     }
 
+    .seat:hover:not(.unavailable):not(.selected) {
+      background-color: #666;
+    }
+
+    /* Legend styling */
     .legend {
       display: flex;
       justify-content: space-around;
@@ -153,9 +143,11 @@
       background-color: #e74c3c;
     }
 
+    /* Summary section */
     .summary {
       margin-top: 20px;
       font-size: 18px;
+      text-align: center;
     }
 
     .btn {
@@ -166,41 +158,41 @@
       font-size: 18px;
       border-radius: 5px;
       cursor: pointer;
+      margin: 0 auto;
+      display: block;
     }
 
     .btn:hover {
       background-color: #e6b800;
     }
 
-    /* Footer */
+    /* Footer styling */
     .footer {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px;
       position: fixed;
       bottom: 0;
+      left: 0;
       width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 20px;
       background-color: rgba(0, 0, 0, 0.7);
-      color: white;
+      color: #fff;
+      font-size: 14px;
     }
 
-    .footer-left {
+    .footer .cineplex {
       text-align: left;
     }
 
-    .footer-right {
+    .footer .designed-by {
       text-align: right;
     }
   </style>
 </head>
 <body>
 
-  <!-- Slideshow Background -->
-  <div class="slideshow">
-    <img src="Assets/Background_Scene1.png" alt="Background 1">
-    <img src="Assets/Background_Scene2.png" alt="Background 2">
-    <img src="Assets/Background_Scene3.png" alt="Background 3">
-  </div>
+  <!-- Background Image -->
+  <div class="background"></div>
 
   <!-- Main Content Container -->
   <div class="container">
@@ -259,7 +251,7 @@
         <div class="seat" data-price="1200">C12</div>
       </div>
 
-      <!-- Back rows (10 seats) -->
+      <!-- Back rows (12 seats) -->
       <div class="row">
         <div class="seat" data-price="1500">D1</div>
         <div class="seat" data-price="1500">D2</div>
@@ -284,17 +276,18 @@
     <!-- Summary Section -->
     <div class="summary">
       <p><span id="count">0</span> seat(s) selected</p>
-      <p>Total: LKR <span id="total">0</span></p><br>
+      <p>Total: LKR <span id="total">0</span></p>
+      <br>
       <button class="btn">Proceed</button>
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- Footer Section -->
   <div class="footer">
-    <div class="footer-left">
+    <div class="cineplex">
       <p>&copy; 2024 Cineplex Movies. All rights reserved.</p>
     </div>
-    <div class="footer-right">
+    <div class="designed-by">
       <p>Designed by Chatura Dissanayake | consultchatura@gmail.com</p>
     </div>
   </div>
